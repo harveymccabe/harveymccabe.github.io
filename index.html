@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harvey McCabe</title>
+  <meta name="title" content="Harvey McCabe – Digital Project Manager. Manchester, UK.">
+  <meta name="description" content="A digital culture obsessive who probably spends a bit too much time on the internet.">
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,15 +19,17 @@
       --color-primary: rgb(0, 47, 167);
       --color-text: #000;
       --color-bg: #f3f3f3;
-      --color-link: blue;
+      --color-link: black;
       --color-button-bg: transparent;
       --color-button-hover-bg: #000;
       --color-button-text: #3f3f3f;
       --color-button-hover-text: #fff;
-      --max-width: 1000px;
+      --max-width: 780px;
     }
 
-    * {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -40,19 +44,19 @@
       padding: 2.5rem;
     }
 
+    header,
+    main,
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
     header {
-      padding-top: 0.5rem;
-      padding-bottom: 3rem;
+      padding: 0.5rem 0 3rem;
     }
 
     footer {
-      padding-top: 4rem;
-      padding-bottom: 0.5rem;
-    }
-
-    header, main, footer {
-      max-width: 780px;
-      margin: auto;
+      padding: 4rem 0 0.5rem;
     }
 
     h1, h2, h3 {
@@ -68,8 +72,9 @@
     }
 
     h2 {
-      font-size: 1.05rem;
+      font-size: 1.20rem;
       font-weight: 700;
+      max-width: 550px;
     }
 
     h3 {
@@ -78,12 +83,12 @@
     }
 
     p {
-      font-size: 0.95rem;
+      font-size: 0.88rem;
       margin: 0.75rem 0;
     }
 
     ul {
-      font-size: 0.95rem;
+      font-size: 0.88rem;
       padding-left: 1.2rem;
       margin: 0.75rem 0;
     }
@@ -91,10 +96,12 @@
     img {
       display: block;
       width: 70%;
+      max-width: 100%;
       height: auto;
       object-fit: contain;
       margin-top: 2rem;
-    margin-bottom: 2rem;
+      margin-bottom: 2rem;
+      text-align: auto;
     }
 
     a {
@@ -111,6 +118,7 @@
       color: var(--color-button-text);
       border: 1px solid #000;
       text-decoration: none;
+      font-size: 0.8rem;
       transition: background 0.3s, color 0.3s;
     }
 
@@ -137,7 +145,9 @@
         font-size: 1rem;
       }
 
-      h3, p, ul {
+      h3,
+      p,
+      ul {
         font-size: 0.9rem;
       }
 
@@ -145,34 +155,13 @@
         font-size: 0.9rem;
       }
     }
-      
-      @media (max-width: 300px) {
-  body {
-    padding: 1rem;
-  }
 
-  h1 {
-    font-size: 1.25rem;
-  }
-
-  h2 {
-    font-size: 1rem;
-  }
-
-  h3, p, ul {
-    font-size: 0.9rem;
-  }
-
-  .button {
-    font-size: 0.9rem;
-  }
-
-  img {
-    max-width: 300px;
-    width: 100%;
-  }
-}
-
+    @media (max-width: 300px) {
+      img {
+        max-width: 300px;
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -183,21 +172,21 @@
 
     <main>
       <section>
-        <h2>Hi, I’m Harvey McCabe. A digital culture obsessive who probably spends a bit too much time on the internet.</h2>
+        <h2>Hi, I’m Harvey. A digital culture obsessive who probably spends a bit too much time on the internet.</h2>
         <h3>Digital Project Manager, with a background in audio and entertainment.</h3>
         <h3><i>Manchester, UK.</i></h3>
       </section>
 
       <section>
-        <img src="ASCIIFlowerGarden.png" alt="ASCII Flower Garden by Joan G. Stark">
+        <img src="ASCIIFlowerGarden.png" alt="ASCII Flower Garden by Joan G. Stark" />
       </section>
 
       <section>
         <p>Here to work on projects with purpose - and to deliver them to audiences with creative, empathetic, and effective leadership.</p>
 
-        <p>I have over a decade of experience leading digital brands and campaigns in the UK audio and music industry - including roles at BBC Radio (combined 7.5 years, spanning all their national networks - including Radio 1, Radio 2, and Radio 4) and Bauer Media (Heat, Greatest Hits Radio, Hits Radio) - starting my career as a radio producer before specialising in social media. My background brings together content strategy, audience growth, and platform innovation - backed by a solid understanding of agile ways of working and leading cross-functional teams.</p>
+        <p>I have over a decade of experience leading digital brands and campaigns in the UK audio and music industry - including roles at <a href="http://www.bbc.co.uk/sounds">BBC Radio</a> (combined 7.5 years, spanning all their national networks - including Radio 1, Radio 2, and Radio 4) and <a href="http://www.bauermedia.co.uk">Bauer Media</a> (<a href="http://www.heatradio.com">Heat</a>, <a href="http://www.greatesthitsradio.co.uk">Greatest Hits Radio</a>, <a href="http://www.hitsradio.co.uk">Hits Radio</a>) - starting my career as a radio producer before specialising in social media. My background brings together content strategy, audience growth, and platform innovation - backed by a solid understanding of agile ways of working and leading cross-functional teams.</p>
 
-        <p>Most recently, I was the Senior Social Media Lead for BBC Radio 2, Radio 3 and 6 Music - overseeing creative output for the three national networks, shaping strategy with stakeholders, and empowering my extremely talented team to deliver over 1 billion organic video views in 2024.</p>
+        <p>Most recently, I was the Senior Social Media Lead for <a href="http://www.bbc.co.uk/radio2">BBC Radio 2</a>, <a href="http://www.bbc.co.uk/radio3">Radio 3</a> and <a href="http://www.bbc.co.uk/6music">6 Music</a> - overseeing creative output for the three national networks, shaping strategy with stakeholders, and empowering my extremely talented team to deliver over 1 billion organic video views in 2024.</p>
 
         <p>Key projects included:</p>
         <ul>
@@ -213,7 +202,7 @@
       </section>
 
       <section>
-        <p>harveyjmccabe at gmail dot com</p>
+        <p><strong><a href="mailto:harveyjmccabe@gmail.com">harveyjmccabe at gmail dot com</a></strong></p>
         <a href="https://www.linkedin.com/in/harveymccabe/" class="button" target="_blank" rel="noopener noreferrer">My CV on LinkedIn →</a>
       </section>
     </main>
