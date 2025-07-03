@@ -1,137 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harvey McCabe</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet" />
+
   <style>
-    body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      margin: 2rem;
-      background-color: #fff;
-      color: #000;
-        height: auto;
-letter-spacing: normal;
-overflow-wrap: break-word;
-text-transform: none;
-text-wrap-mode: wrap;
-width: auto;
--webkit-font-smoothing: antialiased;
-display: inline;
+    :root {
+      --font-display: 'EB Garamond', serif;
+      --font-body: 'Helvetica Neue', Arial, sans-serif;
+      --color-primary: rgb(0, 47, 167);
+      --color-text: #000;
+      --color-bg: #f3f3f3;
+      --color-link: blue;
+      --color-button-bg: transparent;
+      --color-button-hover-bg: #000;
+      --color-button-text: #3f3f3f;
+      --color-button-hover-text: #fff;
+      --max-width: 1000px;
     }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.6;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      padding: 2.5rem;
+    }
+
     header, main, footer {
       max-width: 780px;
-        margin-left: 0;
-  margin-right: auto;
+      margin: auto;
     }
-    #container {
-    max-width: 1000px;
-        margin:auto;
-      }
+
     h1, h2, h3 {
       margin-top: 1.5rem;
     }
-      h1 {
-          color: rgb(0, 47, 167);
-font-size: 21.6px;
-          display: : "tahoma";
-font-style: normal;
-font-weight: 400;
-line-height: 30.24px;
-      }
-      h2 {
-          font-size: 16.799999px;
-          font-weight: 700;
-      }
-      h3 {
-        font-size: 15px;
-          font-weight: normal;
-      }
-      p {
-          font-size: 14px;
-      }
-      ul {
-                font-size: 14px;
 
-      }
-      img {
-          aspect-ratio: auto 1565 / 360;
-display: block;
-height: 120px;
-letter-spacing: normal;
-line-height: 24.960001px;
-object-fit: contain;
-object-position: 50% 50%;
-overflow-wrap: break-word;
-text-transform: none;
-width: 544.75px;
-      }
-    a {
-      color: blue;
-      text-decoration: underline;
+    h1 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--color-primary);
+      line-height: 1.4;
     }
-    footer p {
-          font-size: 12px;
-      }
-      
+
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 0.95rem;
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin: 0.75rem 0;
+    }
+
+    ul {
+      font-size: 0.95rem;
+      padding-left: 1.2rem;
+      margin: 0.75rem 0;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      margin: 1.5rem 0;
+    }
+
+    a {
+      color: var(--color-link);
+      text-decoration: underline;
+      word-break: break-word;
+    }
+
     .button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0);
-  color: #3f3f3f;
-    border-style: solid;
-        border-color: #000000;
-        border-width: 1px;
-  text-decoration: none;
-}
-.button:hover {
-  background-color: #000000;
-color: #ffff;
-}
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: var(--color-button-bg);
+      color: var(--color-button-text);
+      border: 1px solid #000;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .button:hover {
+      background-color: var(--color-button-hover-bg);
+      color: var(--color-button-hover-text);
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      h3, p, ul {
+        font-size: 0.9rem;
+      }
+
+      .button {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
-    <div id="container">
-  <header>
-    <h1>Harvey McCabe</h1>
-  </header>
+  <div id="container">
+    <header>
+      <h1>Harvey McCabe ✹</h1>
+    </header>
 
-  <main>
-    <section>
-      <h2>Hi, I’m Harvey McCabe. A digital culture obsessive who probably spends a bit too much time on the internet.</h2>
+    <main>
+      <section>
+        <h2>Hi, I’m Harvey McCabe. A digital culture obsessive who probably spends a bit too much time on the internet.</h2>
         <h3>Digital Project Manager, with a background in audio and entertainment.</h3>
         <h3><i>Manchester, UK.</i></h3>
-    </section>
-    <section>
-        <img src="ASCIIFlowerGarden.png" alt="ASCII Flower Garden by Joan G. Stark">  
-    </section>
-    <section>
+      </section>
+
+      <section>
+        <img src="ASCIIFlowerGarden.png" alt="ASCII Flower Garden by Joan G. Stark">
+      </section>
+
+      <section>
         <p>Here to work on projects with purpose - and to deliver them to audiences with creative, empathetic, and effective leadership.</p>
+
         <p>I have over a decade of experience leading digital brands and campaigns in the UK audio and music industry - including roles at BBC Radio (combined 7.5 years, spanning all their national networks - including Radio 1, Radio 2, and Radio 4) and Bauer Media (Heat, Greatest Hits Radio, Hits Radio) - starting my career as a radio producer before specialising in social media. My background brings together content strategy, audience growth, and platform innovation - backed by a solid understanding of agile ways of working and leading cross-functional teams.</p>
+
         <p>Most recently, I was the Senior Social Media Lead for BBC Radio 2, Radio 3 and 6 Music - overseeing creative output for the three national networks, shaping strategy with stakeholders, and empowering my extremely talented team to deliver over 1 billion organic video views in 2024.</p>
+
         <p>Key projects included:</p>
         <ul>
-            <li>Coverage of flagship BBC live music events (Glastonbury Festival, Radio 2 in the Park, 6 Music Festival, BBC Proms)</li>
-            <li>Editorial and platform strategy refreshes for Radio 2 and 6 Music</li>
-            <li>Proposing and launching a modern new presence for Radio 3</li>
-            <li>The ‘Change The Tune’ moderation initiative on 6 Music - aimed at making online spaces more positive for musicians and fans.</li>
+          <li>Coverage of flagship BBC live music events (Glastonbury Festival, Radio 2 in the Park, 6 Music Festival, BBC Proms)</li>
+          <li>Editorial and platform strategy refreshes for Radio 2 and 6 Music</li>
+          <li>Proposing and launching a modern new presence for Radio 3</li>
+          <li>The ‘Change The Tune’ moderation initiative on 6 Music - aimed at making online spaces more positive for musicians and fans.</li>
         </ul>
+
         <p>Before that, I was BBC Radio Social's Senior Planner, leading portfolio-wide projects, evolving our approach to prioritisation and performance measurement, developing and testing tactics, and building valuable collaborations across the organisation.</p>
 
         <p>After taking a career break to travel around Australia, I’m now excited to pursue a career pivot - applying my skills to a product-focused role in the tech space. Whether it’s project management, shaping and communicating digital strategy, driving growth, or team leadership - or a combination of all of those things, I'd love to chat about how I could fit into your team.</p>
-    </section>
-      
-    <section>
-        <p>harveyjmccabe at gmail dot com</p>
-        <a href="https://www.linkedin.com/in/harveymccabe/" class="button">My CV on LinkedIn →</a>
-    </section>
-  </main>
+      </section>
 
-  <footer>
+      <section>
+        <p>harveyjmccabe at gmail dot com</p>
+        <a href="https://www.linkedin.com/in/harveymccabe/" class="button" target="_blank" rel="noopener noreferrer">My CV on LinkedIn →</a>
+      </section>
+    </main>
+
+    <footer>
       <p>Thanks for visiting :)</p>
       <p>ASCII Flower Garden by Joan G. Stark</p>
-  </footer>
-        </div>
+    </footer>
+  </div>
 </body>
 </html>
