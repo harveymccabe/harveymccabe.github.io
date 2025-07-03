@@ -6,26 +6,93 @@
   <title>Harvey McCabe</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Helvetica Neue", Arial, sans-serif;
       line-height: 1.6;
       margin: 2rem;
       background-color: #fff;
       color: #000;
+        height: auto;
+letter-spacing: normal;
+overflow-wrap: break-word;
+text-transform: none;
+text-wrap-mode: wrap;
+width: auto;
+-webkit-font-smoothing: antialiased;
+display: inline;
     }
     header, main, footer {
-      max-width: 800px;
-      margin: auto;
+      max-width: 780px;
+        margin-left: 0;
+  margin-right: auto;
     }
+    #container {
+    max-width: 1000px;
+        margin:auto;
+      }
     h1, h2, h3 {
       margin-top: 1.5rem;
     }
+      h1 {
+          color: rgb(0, 47, 167);
+font-size: 21.6px;
+          display: : "tahoma";
+font-style: normal;
+font-weight: 400;
+line-height: 30.24px;
+      }
+      h2 {
+          font-size: 16.799999px;
+          font-weight: 700;
+      }
+      h3 {
+        font-size: 15px;
+          font-weight: normal;
+      }
+      p {
+          font-size: 14px;
+      }
+      ul {
+                font-size: 14px;
+
+      }
+      img {
+          aspect-ratio: auto 1565 / 360;
+display: block;
+height: 120px;
+letter-spacing: normal;
+line-height: 24.960001px;
+object-fit: contain;
+object-position: 50% 50%;
+overflow-wrap: break-word;
+text-transform: none;
+width: 544.75px;
+      }
     a {
       color: blue;
       text-decoration: underline;
     }
+    footer p {
+          font-size: 12px;
+      }
+      
+    .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #3f3f3f;
+    border-style: solid;
+        border-color: #000000;
+        border-width: 1px;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #000000;
+color: #ffff;
+}
   </style>
 </head>
 <body>
+    <div id="container">
   <header>
     <h1>Harvey McCabe</h1>
   </header>
@@ -33,8 +100,8 @@
   <main>
     <section>
       <h2>Hi, I’m Harvey McCabe. A digital culture obsessive who probably spends a bit too much time on the internet.</h2>
-        <p>Digital Project Manager, with a background in audio and entertainment.</p>
-        <p><i>Manchester, UK.</i></p>
+        <h3>Digital Project Manager, with a background in audio and entertainment.</h3>
+        <h3><i>Manchester, UK.</i></h3>
     </section>
     <section>
         <img src="ASCIIFlowerGarden.png" alt="ASCII Flower Garden by Joan G. Stark">  
@@ -57,7 +124,7 @@
       
     <section>
         <p>harveyjmccabe at gmail dot com</p>
-        <button type="button">My CV on LinkedIn →</button>
+        <a href="https://www.linkedin.com/in/harveymccabe/" class="button">My CV on LinkedIn →</a>
     </section>
   </main>
 
@@ -65,5 +132,6 @@
       <p>Thanks for visiting :)</p>
       <p>ASCII Flower Garden by Joan G. Stark</p>
   </footer>
+        </div>
 </body>
 </html>
