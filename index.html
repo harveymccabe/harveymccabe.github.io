@@ -40,6 +40,16 @@
       padding: 2.5rem;
     }
 
+    header {
+      padding-top: 0.5rem;
+      padding-bottom: 3rem;
+    }
+
+    footer {
+      padding-top: 4rem;
+      padding-bottom: 0.5rem;
+    }
+
     header, main, footer {
       max-width: 780px;
       margin: auto;
@@ -81,10 +91,11 @@
 
     img {
       display: block;
-      max-width: 100%;
+      width: 70%;
       height: auto;
       object-fit: contain;
-      margin: 1.5rem 0;
+      margin-top: 2rem;
+    margin-bottom: 2rem;
     }
 
     a {
@@ -135,6 +146,34 @@
         font-size: 0.9rem;
       }
     }
+      
+      @media (max-width: 300px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3, p, ul {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+  }
+
+  img {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
   </style>
 </head>
 <body>
