@@ -6,7 +6,7 @@
   <title>Harvey McCabe</title>
   <meta name="title" content="Harvey McCabe – Digital Project Manager. Manchester, UK.">
   <meta name="description" content="A digital culture obsessive who probably spends a bit too much time on the internet.">
-  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <link rel="icon" href="/favicon.png" type="image/png">
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +25,7 @@
       --color-button-hover-bg: #000;
       --color-button-text: #3f3f3f;
       --color-button-hover-text: #fff;
-      --max-width: 780px;
+      --max-width: 850px;
     }
 
     *,
@@ -46,9 +46,7 @@
       cursor: url('/arrowhead-rounded-outline.svg'), auto;
     }
 
-    header,
-    main,
-    footer {
+    #container {
       max-width: var(--max-width);
       margin: 0 auto;
     }
@@ -57,31 +55,47 @@
       padding: 0.5rem 0 3rem;
     }
 
-    footer {
-      padding: 4rem 0 0.5rem;
+    .marquee {
+      width: 20%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      margin-left: 0;
     }
 
-    h1, h2, h3 {
-      margin-top: 1.5rem;
-    }
-
-    h1 {
+    .marquee h1 {
       font-family: var(--font-display);
       font-size: 1.35rem;
       font-weight: 400;
       color: var(--color-primary);
       line-height: 1.4;
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 25s linear infinite;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
 
     h2 {
-      font-size: 1.20rem;
+      font-size: 1.2rem;
       font-weight: 700;
       max-width: 550px;
+      margin-top: 1.5rem;
     }
 
     h3 {
       font-size: 0.95rem;
       font-weight: normal;
+      margin-top: 1.5rem;
     }
 
     p {
@@ -101,9 +115,7 @@
       max-width: 100%;
       height: auto;
       object-fit: contain;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      text-align: auto;
+      margin: 2rem 0;
     }
 
     a {
@@ -111,9 +123,9 @@
       text-decoration: underline;
       word-break: break-word;
     }
-    
-    a:hover{
-      cursor: url("arrowhead-rounded-outline-hover.svg") 0 0, auto;
+
+    a:hover {
+      cursor: url('/arrowhead-rounded-outline-hover.svg') 0 0, auto;
     }
 
     .button {
@@ -133,17 +145,26 @@
       color: var(--color-button-hover-text);
     }
 
+    footer {
+      padding: 4rem 0 0.5rem;
+    }
+
     footer p {
       font-size: 0.8rem;
       margin-top: 0.5rem;
     }
 
+    /* Responsive Styles */
     @media (max-width: 600px) {
       body {
         padding: 1rem;
       }
 
-      h1 {
+      .marquee {
+        width: 80%;
+      }
+
+      .marquee h1 {
         font-size: 1.25rem;
       }
 
@@ -164,19 +185,21 @@
 
     @media (max-width: 300px) {
       img {
-        max-width: 300px;
         width: 100%;
+        max-width: 300px;
       }
     }
   </style>
 </head>
 <body>
   <div id="container">
-    <header>
-      <h1>Harvey McCabe ✹</h1>
+    <header role="banner">
+      <div class="marquee">
+        <h1>Harvey McCabe ✹ Harvey McCabe ✹ Harvey McCabe ✹ Harvey McCabe ✹ Harvey McCabe ✹ </h1>
+      </div>
     </header>
 
-    <main>
+    <main role="main">
       <section>
         <h2>Hi, I’m Harvey. A digital culture obsessive who probably spends a bit too much time on the internet...</h2>
         <h3>Digital Project Manager, with a background in audio and entertainment.</h3>
@@ -184,27 +207,27 @@
       </section>
 
       <section>
-        <img src="/ASCIIFlowerGarden.png" alt="ASCII Flower Garden by Joan G. Stark" />
+        <img src="/ASCIIFlowerGarden.png" alt="ASCII art of flowers by Joan G. Stark" />
       </section>
 
       <section>
-        <p>Here to work on projects with purpose - and to deliver them to audiences with creative, empathetic, and effective leadership. </p>
+        <p>Here to work on projects with purpose – and to deliver them to audiences with creative, empathetic, and effective leadership.</p>
 
-        <p>I have over a decade of experience leading digital brands and campaigns in the UK audio and music industry - including roles at <a href="http://www.bbc.co.uk/sounds">BBC Radio</a> (combined 7.5 years, spanning all their national networks - including Radio 1, Radio 2, and Radio 4) and <a href="http://www.bauermedia.co.uk">Bauer Media</a> (<a href="http://www.heatradio.com">Heat</a>, <a href="http://www.greatesthitsradio.co.uk">Greatest Hits Radio</a>, <a href="http://www.hitsradio.co.uk">Hits Radio</a>) - starting my career as a radio producer before specialising in social media. My background brings together content strategy, audience growth, and platform innovation - backed by a solid understanding of agile ways of working and leading cross-functional teams.</p>
+        <p>I have over a decade of experience leading digital brands and campaigns in the UK audio and music industry – including roles at <a href="http://www.bbc.co.uk/sounds">BBC Radio</a> and <a href="http://www.bauermedia.co.uk">Bauer Media</a> – starting my career as a radio producer before specialising in social media. My background brings together content strategy, audience growth, and platform innovation – backed by a solid understanding of agile ways of working and leading cross-functional teams.</p>
 
-        <p>Most recently, I was the Senior Social Media Lead for <a href="http://www.bbc.co.uk/radio2">BBC Radio 2</a>, <a href="http://www.bbc.co.uk/radio3">Radio 3</a> and <a href="http://www.bbc.co.uk/6music">6 Music</a> - overseeing creative output for the three national networks, shaping strategy with stakeholders, and empowering my extremely talented team to deliver over 1 billion organic video views in 2024.</p>
+        <p>Most recently, I was the Senior Social Media Lead for <a href="http://www.bbc.co.uk/radio2">BBC Radio 2</a>, <a href="http://www.bbc.co.uk/radio3">Radio 3</a> and <a href="http://www.bbc.co.uk/6music">6 Music</a> – overseeing creative output for the three national networks, shaping strategy with stakeholders, and empowering my extremely talented team to deliver over 1 billion organic video views in 2024.</p>
 
         <p>Key projects included:</p>
         <ul>
           <li>Coverage of flagship BBC live music events (Glastonbury Festival, Radio 2 in the Park, 6 Music Festival, BBC Proms)</li>
           <li>Editorial and platform strategy refreshes for Radio 2 and 6 Music</li>
           <li>Proposing and launching a modern new presence for Radio 3</li>
-          <li>The ‘Change The Tune’ moderation initiative on 6 Music - aimed at making online spaces more positive for musicians and fans.</li>
+          <li>The ‘Change The Tune’ moderation initiative on 6 Music – aimed at making online spaces more positive for musicians and fans.</li>
         </ul>
 
         <p>Before that, I was BBC Radio Social's Senior Planner, leading portfolio-wide projects, evolving our approach to prioritisation and performance measurement, developing and testing tactics, and building valuable collaborations across the organisation.</p>
 
-        <p>After taking a career break to travel around Australia, I’m now excited to pursue a career pivot - applying my skills to a product-focused role in the tech space. Whether it’s project management, shaping and communicating digital strategy, driving growth, or team leadership - or a combination of all of those things, I'd love to chat about how I could fit into your team.</p>
+        <p>After taking a career break to travel around Australia, I’m now excited to pursue a career pivot – applying my skills to a product-focused role in the tech space. Whether it’s project management, shaping and communicating digital strategy, driving growth, or team leadership – or a combination of all of those things, I'd love to chat about how I could fit into your team.</p>
       </section>
 
       <section>
@@ -213,7 +236,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
       <p>Thanks for visiting :)</p>
       <p>ASCII Flower Garden by Joan G. Stark. Hosted on GitHub.</p>
     </footer>
