@@ -25,7 +25,7 @@
       --color-button-hover-bg: #000;
       --color-button-text: #3f3f3f;
       --color-button-hover-text: #fff;
-      --max-width: 850px;
+      --max-width: 1100px;
     }
 
     *,
@@ -74,7 +74,7 @@
       margin: 0;
       white-space: nowrap;
     }
-    
+
     .marquee h1 span {
       display: inline-block;
       margin-right: 1rem;
@@ -111,6 +111,10 @@
       font-size: 0.88rem;
       padding-left: 1.2rem;
       margin: 0.75rem 0;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
     }
 
     img {
@@ -154,7 +158,34 @@
       margin-top: 0.5rem;
     }
 
-    /* Responsive Styles */
+    .content-wrapper {
+      display: flex;
+      gap: 5rem; /* ← Increased from 3rem */
+    }
+
+    .main-content {
+      flex: 1;
+    }
+
+    .sidebar {
+      width: 240px;
+      flex-shrink: 0;
+      border-top: solid 2px #000000;
+      margin-top: 2rem;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .content-wrapper {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        margin-top: 2rem;
+      }
+    }
+
     @media (max-width: 600px) {
       body {
         padding: 1rem;
@@ -189,6 +220,7 @@
         max-width: 300px;
       }
     }
+    
   </style>
 </head>
 <body>
@@ -197,53 +229,90 @@
       <div class="marquee">
         <h1>
           <span>Harvey McCabe</span>
-          <span>✹</span>
+          <span aria-hidden="true">✹</span>
           <span>Harvey McCabe</span>
-          <span>✹</span>
+          <span aria-hidden="true">✹</span>
           <span>Harvey McCabe</span>
-          <span>✹</span>
+          <span aria-hidden="true">✹</span>
           <span>Harvey McCabe</span>
-          <span>✹</span>
+          <span aria-hidden="true">✹</span>
         </h1>
       </div>
     </header>
 
-    <main role="main">
-      <section>
-        <h2>Hi, I’m Harvey. A digital culture obsessive who probably spends a bit too much time on the internet...</h2>
-        <h3>Digital Project Manager, with a background in audio and entertainment.</h3>
-        <h3><i>Manchester, UK.</i></h3>
-      </section>
+    <div class="content-wrapper">
+      <main class="main-content" role="main">
+        <section>
+          <h2>Hi, I’m Harvey. A digital culture obsessive who probably spends a bit too much time on the internet...</h2>
+          <h3>Digital Project Manager, with a background in audio and entertainment.</h3>
+          <h3><i>Manchester, UK.</i></h3>
+        </section>
 
-      <section>
-        <img src="/ASCIIFlowerGarden.png" alt="ASCII art of flowers by Joan G. Stark" />
-      </section>
+        <section>
+          <img src="/ASCIIFlowerGarden.png" alt="ASCII art of flowers by Joan G. Stark" />
+        </section>
 
-      <section>
-        <p>Here to work on projects with purpose – and to deliver them to audiences with creative, empathetic, and effective leadership.</p>
+        <section>
+          <p>Here to work on projects with purpose – and to deliver them to audiences with creative, empathetic, and effective leadership.</p>
 
-        <p>I have over a decade of experience leading digital brands and campaigns in the UK audio and music industry – including roles at <a href="http://www.bbc.co.uk/sounds">BBC Radio</a> and <a href="http://www.bauermedia.co.uk">Bauer Media</a> – starting my career as a radio producer before specialising in social media. My background brings together content strategy, audience growth, and platform innovation – backed by a solid understanding of agile ways of working and leading cross-functional teams.</p>
+          <p>I have over a decade of experience leading digital brands and campaigns in the UK audio and music industry – including roles at <a href="http://www.bbc.co.uk/sounds">BBC Radio</a> and <a href="http://www.bauermedia.co.uk">Bauer Media</a> – starting my career as a radio producer before specialising in social media. My background brings together content strategy, audience growth, and platform innovation – backed by a solid understanding of agile ways of working and leading cross-functional teams.</p>
 
-        <p>Most recently, I was the Senior Social Media Lead for <a href="http://www.bbc.co.uk/radio2">BBC Radio 2</a>, <a href="http://www.bbc.co.uk/radio3">Radio 3</a> and <a href="http://www.bbc.co.uk/6music">6 Music</a> – overseeing creative output for the three national networks, shaping strategy with stakeholders, and empowering my extremely talented team to deliver over 1 billion organic video views in 2024.</p>
+          <p>Most recently, I was the Senior Social Media Lead for <a href="http://www.bbc.co.uk/radio2">BBC Radio 2</a>, <a href="http://www.bbc.co.uk/radio3">Radio 3</a> and <a href="http://www.bbc.co.uk/6music">6 Music</a> – overseeing creative output for the three national networks, shaping strategy with stakeholders, and empowering my extremely talented team to deliver over 1 billion organic video views in 2024.</p>
 
-        <p>Key projects included:</p>
-        <ul>
-          <li>Coverage of flagship BBC live music events (Glastonbury Festival, Radio 2 in the Park, 6 Music Festival, BBC Proms)</li>
-          <li>Editorial and platform strategy refreshes for Radio 2 and 6 Music</li>
-          <li>Proposing and launching a modern new presence for Radio 3</li>
-          <li>The ‘Change The Tune’ moderation initiative on 6 Music – aimed at making online spaces more positive for musicians and fans.</li>
-        </ul>
+          <p>Key projects included:</p>
+          <ul>
+            <li>Coverage of flagship BBC live music events (Glastonbury Festival, Radio 2 in the Park, 6 Music Festival, BBC Proms)</li>
+            <li>Editorial and platform strategy refreshes for Radio 2 and 6 Music</li>
+            <li>Proposing and launching a modern new presence for Radio 3</li>
+            <li>The ‘Change The Tune’ moderation initiative on 6 Music – aimed at making online spaces more positive for musicians and fans.</li>
+          </ul>
 
-        <p>Before that, I was BBC Radio Social's Senior Planner, leading portfolio-wide projects, evolving our approach to prioritisation and performance measurement, developing and testing tactics, and building valuable collaborations across the organisation.</p>
+          <p>Before that, I was BBC Radio Social's Senior Planner, leading portfolio-wide projects, evolving our approach to prioritisation and performance measurement, developing and testing tactics, and building valuable collaborations across the organisation.</p>
 
-        <p>After taking a career break to travel around Australia, I’m now excited to pursue a career pivot – applying my skills to a product-focused role in the tech space. Whether it’s project management, shaping and communicating digital strategy, driving growth, or team leadership – or a combination of all of those things, I'd love to chat about how I could fit into your team.</p>
-      </section>
+          <p>After taking a career break to travel around Australia, I’m now excited to pursue a career pivot – applying my skills to a product-focused role in the tech space. Whether it’s project management, shaping and communicating digital strategy, driving growth, or team leadership – or a combination of all of those things, I'd love to chat about how I could fit into your team.</p>
+        </section>
 
-      <section>
-        <p><strong><a href="mailto:harveyjmccabe@gmail.com">harveyjmccabe <i>at</i> gmail <i>dot</i> com</a></strong></p>
-        <a href="https://www.linkedin.com/in/harveymccabe/" class="button" target="_blank" rel="noopener noreferrer">My CV on LinkedIn →</a>
-      </section>
-    </main>
+        <section>
+          <p><strong><a href="mailto:harveyjmccabe@gmail.com">harveyjmccabe <i>at</i> gmail <i>dot</i> com</a></strong></p>
+          <a href="https://www.linkedin.com/in/harveymccabe/" class="button" target="_blank" rel="noopener noreferrer">My CV on LinkedIn →</a>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <h3><strong>Things I've enjoyed recently</strong></h3>
+          <p aria-hidden="true">📚 <a href="https://www.goodreads.com/book/show/223436601-careless-people">Careless People: A Cautionary Tale of Power, Greed, and Lost Idealism</a></p>
+          <p aria-hidden="true">📺 <a href="https://www.theguardian.com/tv-and-radio/2025/jun/26/the-bear-season-four-review-finally-becoming-the-show-it-was-always-destined-to-be">The Bear Season 4</a></p>
+          <p aria-hidden="true">🎧 <a href="https://www.theguardian.com/music/2025/jun/26/lorde-virgin-review">Lorde - Virgin</a></p>
+          <p aria-hidden="true">🎫 <a href="https://www.setlist.fm/setlist/yeah-yeah-yeahs/2025/o2-apollo-manchester-manchester-england-6358e223.html">Yeah Yeah Yeahs: Hidden in Peaces Tour at the Manchester Apollo</a></p>
+          <p aria-hidden="true">📍 <a href="https://www.rhs.org.uk/gardens/bridgewater">RHS Bridgewater</a></p>
+          <p aria-hidden="true">🍽️ <a href="https://www.a1bakery.com.au">A1 Lebanese Bakery in Brunswick, Melbourne</a></p>
+          <p aria-hidden="true">🛒 <a href="https://www.paper-republic.com/en-gb">Paper Republic journals</a></p>
+          <div id="rss-entry">Loading latest post...</div>
+
+  <script>
+    const rssFeedUrl = 'https://letterboxd.com/itsharveybb/rss/';
+    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        if (data.items && data.items.length > 0) {
+          const post = data.items[0];
+          document.getElementById('rss-entry').innerHTML = `
+            🎞️ <a href="${post.link}" target="_blank">${post.title}</a>
+          `;
+        } else {
+          document.getElementById('rss-entry').innerText = 'No posts found.';
+        }
+      })
+      .catch(err => {
+        console.error('RSS fetch error:', err);
+        document.getElementById('rss-entry').innerText = 'Could not load RSS feed.';
+      });
+  </script>
+
+      </aside>
+    </div>
 
     <footer role="contentinfo">
       <p>Thanks for visiting :)</p>
