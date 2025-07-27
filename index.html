@@ -53,7 +53,7 @@
       :root {
         --font-display: "EB Garamond", serif;
         --font-body: "Helvetica Neue", Arial, sans-serif;
-        --color-primary: rgb(0, 47, 167);
+        --color-primary: #b7312d;
         --color-text: #333333;
         --color-bg: #F6F5E8;
         --color-link: #243853;
@@ -173,7 +173,8 @@
         padding: 10px 20px;
         background-color: var(--color-button-bg);
         color: var(--color-button-text);
-        border: 1px solid #000;
+        border: 1px solid;
+        border-color: var(--font-body);
         text-decoration: none;
         font-size: 0.8rem;
         transition:
