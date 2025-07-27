@@ -12,6 +12,7 @@
     <meta name="keywords" content="Harvey McCabe, BBC, Bauer Media, Social Media, Product Owner, Manchester, Digital" />
     <meta name="author" content="Harvey McCabe" />
     <link rel="canonical" href="https://www.harveymccabe.com" />
+    <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="/favicon.png" type="image/png" />
 
     <meta name="robots" content="index, follow" />
@@ -45,233 +46,9 @@
     </script>
 
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet" />
-
-    <style>
-      :root {
-        --font-display: "EB Garamond", serif;
-        --font-body: "Helvetica Neue", Arial, sans-serif;
-        --color-primary: rgb(0, 47, 167);
-        --color-text: #000;
-        --color-bg: #f3f3f3;
-        --color-link: black;
-        --color-button-bg: transparent;
-        --color-button-hover-bg: #000;
-        --color-button-text: #3f3f3f;
-        --color-button-hover-text: #fff;
-        --max-width: 1000px;
-      }
-
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: var(--font-body);
-        font-size: 1rem;
-        line-height: 1.6;
-        background-color: var(--color-bg);
-        color: var(--color-text);
-        padding: 2.5rem;
-      }
-
-      #container {
-        max-width: var(--max-width);
-        margin: 0 auto;
-      }
-
-      header {
-        padding: 0.5rem 0 3rem;
-      }
-
-      .marquee {
-        width: 20%;
-        overflow: hidden;
-        white-space: nowrap;
-        position: relative;
-        margin-left: 0;
-      }
-
-      .marquee h1 {
-        font-family: var(--font-display);
-        font-size: 1.35rem;
-        font-weight: 400;
-        color: var(--color-primary);
-        line-height: 1.4;
-        display: inline-block;
-        padding-left: 100%;
-        animation: scroll-left 22s linear infinite;
-        margin: 0;
-        white-space: nowrap;
-      }
-
-      .marquee h1 span {
-        display: inline-block;
-        margin-right: 1rem;
-      }
-
-      @keyframes scroll-left {
-        0% {
-          transform: translateX(0%);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
-      }
-
-      h2 {
-        font-size: 1.2rem;
-        font-weight: 700;
-        max-width: 550px;
-        margin-top: 1.5rem;
-      }
-
-      h3 {
-        font-size: 1rem;
-        font-weight: normal;
-        margin-top: 1.5rem;
-      }
-
-      p {
-        font-size: 0.9rem;
-        margin: 0.75rem 0;
-      }
-
-      ul {
-        font-size: 0.9rem;
-        padding-left: 1.2rem;
-        margin: 0.75rem 0;
-      }
-
-      ul li {
-        margin-bottom: 0.5rem;
-      }
-
-      img {
-        display: block;
-        width: 70%;
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-        margin: 2rem 0;
-      }
-
-      a {
-        color: var(--color-link);
-        text-decoration: underline;
-        word-break: break-word;
-      }
-
-      .button {
-        display: inline-block;
-        margin-top: 1rem;
-        padding: 10px 20px;
-        background-color: var(--color-button-bg);
-        color: var(--color-button-text);
-        border: 1px solid #000;
-        text-decoration: none;
-        font-size: 0.8rem;
-        transition:
-          background 0.3s,
-          color 0.3s;
-      }
-
-      .button:hover {
-        background-color: var(--color-button-hover-bg);
-        color: var(--color-button-hover-text);
-      }
-
-      footer {
-        padding: 4rem 0 0.5rem;
-      }
-
-      footer p {
-        font-size: 0.8rem;
-        margin-top: 0.5rem;
-      }
-
-      .content-wrapper {
-        display: flex;
-        gap: 5rem; /* ← Increased from 3rem */
-      }
-
-      .main-content {
-        flex: 1;
-      }
-
-      .sidebar {
-        width: 240px;
-        flex-shrink: 0;
-        font-size: 0.8rem;
-      }
-
-      .sidebar p {
-        font-size: 0.8rem;
-      }
-
-      @media (max-width: 800px) {
-        .content-wrapper {
-          flex-direction: column;
-        }
-
-        .sidebar {
-          width: 100%;
-          margin-top: 2rem;
-        }
-      }
-
-      @media (max-width: 600px) {
-        body {
-          padding: 1rem;
-        }
-
-        .marquee {
-          width: 80%;
-        }
-
-        .marquee h1 {
-          font-size: 1.25rem;
-        }
-
-        h2 {
-          font-size: 1rem;
-        }
-
-        p,
-        ul {
-          font-size: 0.9rem;
-        }
-
-        h3 {
-          font-size: 1rem;
-        }
-
-        .button {
-          font-size: 0.9rem;
-        }
-      }
-
-      @media (max-width: 300px) {
-        img {
-          width: 100%;
-          max-width: 300px;
-        }
-      }
-
-      .sidebar-image img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 2rem;
-        border-bottom: 4px solid #000;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="container">
@@ -293,8 +70,8 @@
       <div class="content-wrapper">
         <main class="main-content" role="main">
           <section>
-            <h2>Hi, I'm Harvey - a digital strategist and leader, passionate about culture and how tech can be used for public good.</h2>
-            <h3><i>Manchester, UK.</i></h3>
+            <h2>Hi, I'm Harvey - a digital strategist and leader, passionate about culture and how tech can be used for  good.</h2>
+            <h2><i>Manchester, UK.</i></h2>
           </section>
 
           <section>
@@ -366,7 +143,8 @@
           <div class="sidebar-image">
             <img src="/Headshot.JPG" alt="A photo of me in a blue denim jacket, against a lime green background" />
           </div>
-          <h3><strong>Things I've enjoyed recently</strong></h3>
+          <div class="sidebar-faves">
+          <h3>Things I've enjoyed recently</h3>
           <p aria-hidden="true">
             📺
             <a
@@ -413,6 +191,7 @@
                 document.getElementById("rss-entry").innerText = "Could not load RSS feed.";
               });
           </script>
+            </div>
         </aside>
       </div>
 
