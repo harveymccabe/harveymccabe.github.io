@@ -54,12 +54,12 @@
         --font-display: "EB Garamond", serif;
         --font-body: "Helvetica Neue", Arial, sans-serif;
         --color-primary: rgb(0, 47, 167);
-        --color-text: #333333;
-        --color-bg: #F6F5E8;
-        --color-link: #243853;
+        --color-text: #000;
+        --color-bg: #f3f3f3;
+        --color-link: black;
         --color-button-bg: transparent;
-        --color-button-hover-bg: #1E4844;
-        --color-button-text: #1E4844;
+        --color-button-hover-bg: #000;
+        --color-button-text: #3f3f3f;
         --color-button-hover-text: #fff;
         --max-width: 1000px;
       }
@@ -127,7 +127,7 @@
 
       h2 {
         font-size: 1.2rem;
-        font-weight: 400;
+        font-weight: 700;
         max-width: 550px;
         margin-top: 1.5rem;
       }
@@ -135,6 +135,7 @@
       h3 {
         font-size: 1rem;
         font-weight: normal;
+        margin-top: 1.5rem;
       }
 
       p {
@@ -213,12 +214,6 @@
       .sidebar p {
         font-size: 0.8rem;
       }
-      
-      .sidebar-faves {
-        width: 100%;
-        background: #FFFEF2;
-        padding: 1rem;
-      }
 
       @media (max-width: 800px) {
         .content-wrapper {
@@ -274,6 +269,7 @@
         max-width: 100%;
         height: auto;
         margin-bottom: 2rem;
+        border-bottom: 4px solid #000;
       }
     </style>
   </head>
@@ -297,8 +293,8 @@
       <div class="content-wrapper">
         <main class="main-content" role="main">
           <section>
-            <h2><strong>Hi, I'm Harvey - a digital strategist and leader, passionate about culture and how tech can be used for public good.</strong></h2>
-            <h2><i>Manchester, UK.</i></h2>
+            <h2>Hi, I'm Harvey - a digital strategist and leader, passionate about culture and how tech can be used for public good.</h2>
+            <h3><i>Manchester, UK.</i></h3>
           </section>
 
           <section>
@@ -370,7 +366,6 @@
           <div class="sidebar-image">
             <img src="/Headshot.JPG" alt="A photo of me in a blue denim jacket, against a lime green background" />
           </div>
-          <div class="sidebar-faves">
           <h3><strong>Things I've enjoyed recently</strong></h3>
           <p aria-hidden="true">
             📺
@@ -418,7 +413,6 @@
                 document.getElementById("rss-entry").innerText = "Could not load RSS feed.";
               });
           </script>
-            </div>
         </aside>
       </div>
 
