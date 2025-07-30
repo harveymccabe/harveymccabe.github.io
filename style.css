@@ -130,6 +130,7 @@
         display: inline-block;
         margin-top: 1rem;
         padding: 10px 20px;
+        border-radius: 0.3rem;
         background-color: var(--color-button-bg);
         color: var(--color-button-text);
         border: 1px solid;
@@ -178,6 +179,8 @@
         width: 100%;
         background: #FFFEF2;
         padding: 1rem;
+        border-radius: 0.3rem;
+        border: 1px solid #D7D7CC;
       }
 
       @media (max-width: 800px) {
@@ -229,9 +232,48 @@
         }
       }
 
+      .sidebar-image {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        border: solid 1px #D7D7CC;
+        height: auto;
+        margin-bottom: 2rem;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+      }
+
       .sidebar-image img {
         width: 100%;
         max-width: 100%;
+        border-radius: 0.2rem;
         height: auto;
-        margin-bottom: 2rem;
+        margin: 0;
+        display: block;
+        filter: contrast(1.2) saturate(1.1);
       }
+
+.sidebar-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#000 1px, transparent 1px);
+  background-size: 2px 2px;
+  opacity: 0.2;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+/* RGB offset fuzz */
+.sidebar-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  mix-blend-mode: screen;
+  filter: url(#rgb-shift); /* fallback if using SVG filter below */
+  pointer-events: none;
+  opacity: 0.4;
+}
