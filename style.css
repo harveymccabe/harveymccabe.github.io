@@ -120,6 +120,11 @@
       .sidebar-faves a{
         color: #1E4844
       }
+      
+      .sidebar-faves h3{
+        font-family: "Epilogue", sans-serif;
+        font-weight: 400;
+      }
 
       .button {
         display: inline-block;
@@ -172,21 +177,7 @@
       .sidebar-faves {
         width: 100%;
         background: #FFFEF2;
-        border: 1px solid #1E4844;
-      }
-
-      .sidebar-faves h3 {
-        background: #1E4844;
-        padding: 0.4rem 1rem;
-        font-family: "Epilogue", sans-serif;
-        font-weight: 400;
-        font-size: 0.9rem;
-        color: #fff;
-      }
-
-      .sidebar-faves-body {
-        width: 100%;
-        padding: 0.4rem 1rem 0.8rem 1rem;
+        padding: 1rem;
       }
 
       @media (max-width: 800px) {
