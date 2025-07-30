@@ -1,10 +1,10 @@
       :root {
         --font-display: "EB Garamond", serif;
         --font-body: "Helvetica Neue", Arial, sans-serif;
-        --color-primary: #b7312d;
+        --color-primary: #FA502E;
         --color-text: #333333;
         --color-bg: #F6F5E8;
-        --color-link: #243853;
+        --color-link: #FA502E;
         --color-button-bg: transparent;
         --color-button-hover-bg: #1E4844;
         --color-button-text: #1E4844;
