@@ -300,6 +300,7 @@
 .dock-icon {
   background: #dfdfd8;
   border: none;
+  width: 100%;
   padding: 0 2rem;
   cursor: pointer;
   height: 4.5rem;
@@ -326,7 +327,7 @@
 }
 
 .dock-icon img {
-  width: 25px;
+  width: 55px;
   height: 25px;
   margin: 0 auto 0.3rem auto;
   border: 0;
