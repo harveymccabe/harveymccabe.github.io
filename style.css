@@ -5,7 +5,7 @@
         --color-text: #333333;
         --color-bg: #F6F5E8;
         --color-link: #C53F29;
-        --color-button-bg: #3B928B;
+        --color-button-bg: #008080;
         --color-button-hover-bg: #1E4844;
         --color-button-text: #fff;
         --color-button-hover-text: #fff;
@@ -131,11 +131,12 @@
         display: inline-block;
         margin-top: 1rem;
         padding: 10px 20px;
-        border-radius: 0.3rem;
+        border-radius: 0.2rem;
         background-color: var(--color-button-bg);
         color: var(--color-button-text);
         text-decoration: none;
         font-size: 0.8rem;
+        outline:1px solid #000000;
   box-shadow:
     inset 1px 1px #fff,           /* top-left white highlight */
     inset -1px -1px #404040,      /* bottom-right shadow */
@@ -266,7 +267,7 @@
   inset: 0;
   background-image: radial-gradient(#000 1px, transparent 1px);
   background-size: 2px 2px;
-  opacity: 0.11;
+  opacity: 0.16;
   pointer-events: none;
   mix-blend-mode: multiply;
 }
