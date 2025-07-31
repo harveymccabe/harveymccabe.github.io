@@ -186,7 +186,7 @@
         background: #FFFEF2;
         padding: 1rem;
         border-radius: 0.3rem;
-        border: 1px solid #555;
+        border: 1px solid #D7D7CC;
       }
 
       @media (max-width: 800px) {
@@ -243,7 +243,7 @@
         max-width: 100%;
         padding: 0.5rem;
         border-radius: 0.3rem;
-        border: solid 1px #555;
+        border: solid 1px #D7D7CC;
         height: auto;
         margin-bottom: 2rem;
         position: relative;
