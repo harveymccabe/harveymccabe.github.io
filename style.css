@@ -284,10 +284,10 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 30%;
+  max-width: 40%;
   z-index: 9999;
   height: 4.5rem;
-  background: #e0e0e0;
+  background: #EFBC98;
   border: 1px solid #c0c0c0;
   justify-content: center;
   align-items: center;
@@ -326,7 +326,7 @@
 }
 
 .dock-icon img {
-  width: 55px;
+  width: 60px;
   height: 25px;
   margin: 0 auto 0.3rem auto;
   border: 0;
