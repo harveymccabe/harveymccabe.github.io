@@ -187,16 +187,55 @@
   
   <div class="dock">
   <a href="https://www.linkedin.com/in/harveymccabe/" class="dock-icon">
-    <img src="li-icon.png" alt="App 1">
+    <img src="li-icon.png" alt="LinkedIn 8 Bit Icon">
     LinkedIn
   </a>
   <a href="mailto:harveyjmccabe@gmail.com" class="dock-icon">
-    <img src="email-icon.png" alt="App 2">
+    <img src="email-icon.png" alt="Email 8 Bit Icon">
     Cuppa?
   </a>
     <a href="https://www.newyorker.com/culture/infinite-scroll/are-you-experiencing-posting-ennui" class="dock-icon">
-    <img src="luckydip-icon.png" alt="App 2">
+    <img src="luckydip-icon.png" alt="Website Bookmark 8 Bit Icon">
     Lucky Dip
+  </a> 
+        <a href="#" class="dock-icon dock-info">
+    <div class="clock" id="clock">
+      <span id="hours">00</span>
+      <span class="colon">:</span>
+      <span id="minutes">00</span>
+    </div>
+
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+
+        document.getElementById('hours').textContent = hours;
+        document.getElementById('minutes').textContent = minutes;
+       
+      }
+
+      setInterval(updateClock, 1000);
+      updateClock(); // initial call
+    </script>
+          <p id="dateDisplay"></p>
+
+<script>
+  const dateElement = document.getElementById('dateDisplay');
+
+  const options = {
+    weekday: 'short',
+    day: '2-digit',
+    month: 'short'
+  };
+
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString('en-GB', options).replace(',', '');
+
+  dateElement.textContent = formattedDate;
+</script>
+
   </a> 
 </div>
   

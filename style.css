@@ -292,10 +292,17 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
+  width: 490px;
   z-index: 9999;
   height: 4.5rem;
   background: #fde1cd;
+    background-image: repeating-linear-gradient(
+    to bottom,
+    #777 0px,
+    #ccc 1px,
+    #fde1cd 1px,
+    #fde1cd 3px
+  );
   border: 1px solid #c0c0c0;
   justify-content: center;
   align-items: center;
@@ -304,7 +311,6 @@
 }
 
 .dock-icon {
-  background: #dfdfd8;
   border: none;
   width: 100%;
   padding: 0 2rem;
@@ -332,6 +338,14 @@
   background: #ecebe1;
 }
 
+.dock-item {
+    background: #dfdfd8;
+}
+
+.dock-info {
+  background: #ecebe1;
+}
+
 .dock-icon img {
   width: 50px;
   height: 20px;
@@ -353,3 +367,26 @@
     padding: 0;
   }
 }
+
+      .colon {
+        animation: blink 1s steps(1, start) infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+
+.clock {
+  width: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
+  #dateDisplay {
+    text-align: center;
+    font-size: inherit;
+    margin: 0;
+    padding-top:0.3rem;
+  }
