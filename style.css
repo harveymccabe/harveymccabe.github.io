@@ -326,9 +326,22 @@
 }
 
 .dock-icon img {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   margin: 0 auto 0.3rem auto;
   border: 0;
-  image-rendering: pixelated;
+}
+
+@media (max-width: 600px) {
+  .dock {
+    left: 0;
+    transform: none;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .dock-icon {
+    flex: 1;
+    padding: 0; /* optional: reduce padding for narrow screens */
+  }
 }
