@@ -298,7 +298,7 @@
   background: #fde1cd;
     background-image: repeating-linear-gradient(
     to bottom,
-    #777 0px,
+    #777 0,
     #ccc 1px,
     #fde1cd 1px,
     #fde1cd 3px
@@ -382,11 +382,12 @@
   width: 60px;
   font-weight: bold;
   text-align: center;
+  font-size: 0.8rem;
 }
 
   #dateDisplay {
     text-align: center;
-    font-size: inherit;
     margin: 0;
+    font-size: 0.8rem;
     padding-top:0.3rem;
   }
