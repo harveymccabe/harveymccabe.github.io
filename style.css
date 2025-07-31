@@ -324,7 +324,7 @@
   justify-content: center;
   text-decoration: none;
   color: inherit;
-
+  background: #dfdfd8;
   box-shadow: 
     inset -1px -1px 0 #fff,   /* bottom + right highlight */
     inset 1px 1px 0 #bababa;  /* top + left shadow */
