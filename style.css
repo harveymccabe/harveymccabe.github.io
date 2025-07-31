@@ -134,11 +134,12 @@
         border-radius: 0.3rem;
         background-color: var(--color-button-bg);
         color: var(--color-button-text);
-        border: 1px solid #1E4844;
         text-decoration: none;
         font-size: 0.8rem;
-        box-shadow: 2px 2px #1E4844;
-        transition:
+  box-shadow:
+    inset 1px 1px #fff,           /* top-left white highlight */
+    inset -1px -1px #404040,      /* bottom-right shadow */
+    2px 2px #1E4844;              /* external drop shadow for lift */        transition:
           background 0.3s,
           color 0.3s;
       }
@@ -146,6 +147,10 @@
       .button:hover {
         background-color: var(--color-button-hover-bg);
         color: var(--color-button-hover-text);
+          box-shadow:
+    inset 1px 1px #fff,           /* top-left white highlight */
+    inset -1px -1px #404040,      /* bottom-right shadow */
+    2px 2px var(--color-button-bg);              /* external drop shadow for lift */
       }
 
       footer {
@@ -181,7 +186,7 @@
         background: #FFFEF2;
         padding: 1rem;
         border-radius: 0.3rem;
-        border: 1px solid #D7D7CC;
+        border: 1px solid #555;
       }
 
       @media (max-width: 800px) {
@@ -238,7 +243,7 @@
         max-width: 100%;
         padding: 0.5rem;
         border-radius: 0.3rem;
-        border: solid 1px #D7D7CC;
+        border: solid 1px #555;
         height: auto;
         margin-bottom: 2rem;
         position: relative;
