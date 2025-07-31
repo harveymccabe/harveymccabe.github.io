@@ -5,9 +5,9 @@
         --color-text: #333333;
         --color-bg: #F6F5E8;
         --color-link: #C53F29;
-        --color-button-bg: transparent;
+        --color-button-bg: #3B928B;
         --color-button-hover-bg: #1E4844;
-        --color-button-text: #1E4844;
+        --color-button-text: #fff;
         --color-button-hover-text: #fff;
         --max-width: 1050px;
       }
@@ -28,7 +28,7 @@
         font-optical-sizing: auto;
         color: var(--color-text);
         padding: 2.5rem 0 8rem 0;
-        cursor: url("classic-pointer.cur"), auto;
+        cursor: url("classic-pointer.cur"), auto !important;
       }
 
       #container {
@@ -134,10 +134,10 @@
         border-radius: 0.3rem;
         background-color: var(--color-button-bg);
         color: var(--color-button-text);
-        border: 1px solid;
-        border-color: var(--font-body);
+        border: 1px solid #1E4844;
         text-decoration: none;
         font-size: 0.8rem;
+        box-shadow: 2px 2px #1E4844;
         transition:
           background 0.3s,
           color 0.3s;
