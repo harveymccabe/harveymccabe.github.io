@@ -236,7 +236,7 @@
         width: 100%;
         max-width: 100%;
         padding: 0.5rem;
-        border-radius: 0.2rem;
+        border-radius: 0.3rem;
         border: solid 1px #D7D7CC;
         height: auto;
         margin-bottom: 2rem;
@@ -248,7 +248,7 @@
       .sidebar-image img {
         width: 100%;
         max-width: 100%;
-        border-radius: 0.2rem;
+        border-radius: 0.3rem;
         height: auto;
         margin: 0;
         display: block;
@@ -276,4 +276,59 @@
   filter: url(#rgb-shift); /* fallback if using SVG filter below */
   pointer-events: none;
   opacity: 0.4;
+}
+
+
+
+.dock {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  z-index: 9999;
+  height: 4.5rem;
+  background: #e0e0e0;
+  border: 1px solid #c0c0c0;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  display: flex;
+}
+
+.dock-icon {
+  background: #dfdfd8;
+  border: none;
+  padding: 0 2rem;
+  cursor: pointer;
+  height: 4.5rem;
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+
+  box-shadow: 
+    inset -1px -1px 0 #fff,   /* bottom + right highlight */
+    inset 1px 1px 0 #bababa;  /* top + left shadow */
+}
+
+.dock-icon:first-child {
+  border-left: none;
+}
+
+.dock-icon:hover {
+  background: #ecebe1;
+}
+
+.dock-icon img {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto 0.3rem auto;
+  border: 0;
+  image-rendering: pixelated;
 }
