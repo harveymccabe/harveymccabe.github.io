@@ -397,3 +397,22 @@
   color: var(--color-primary);
   padding-right: 5px;
 }
+
+.project-list {
+  padding: 0.5rem 0;
+  list-style: none;
+}
+
+.project-list li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0;
+}
+
+.project-list li::before {
+  content: '░';
+  color: #1E4844;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
