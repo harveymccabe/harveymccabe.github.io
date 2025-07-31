@@ -343,6 +343,7 @@
 
   .dock-icon {
     flex: 1;
+    width: 100%;
     padding: 0; /* optional: reduce padding for narrow screens */
   }
 }
