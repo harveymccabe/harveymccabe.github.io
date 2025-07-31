@@ -392,3 +392,8 @@
     font-size: 0.8rem;
     padding-top:0.3rem;
   }
+
+.burst {
+  color: var(--color-primary);
+  padding-right: 5px;
+}
