@@ -79,13 +79,17 @@
         font-size: 1.2rem;
         max-width: 550px;
         margin-top: 1.5rem;
+        margin-bottom: 1rem;
         font-family: "Epilogue", sans-serif;
-        font-weight: 420;
+        font-weight: 460;
+        letter-spacing: -0.01rem;
       }
 
       h3 {
         font-size: 1rem;
-        font-weight: normal;
+        font-weight: 380;
+        max-width: 500px;
+        font-family: "Epilogue", sans-serif;
       }
 
       p {
@@ -425,7 +429,7 @@
 
 .project-list li::before {
   content: '░';
-  color: #1E4844;
+  color: #008080;
   position: absolute;
   left: 0;
   top: 0;
