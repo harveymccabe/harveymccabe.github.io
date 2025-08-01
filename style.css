@@ -127,32 +127,47 @@
         font-weight: 400;
       }
 
-      .button {
-        display: inline-block;
-        margin-top: 1rem;
-        padding: 10px 20px;
-        border-radius: 0.2rem;
-        background-color: var(--color-button-bg);
-        color: var(--color-button-text);
-        text-decoration: none;
-        font-size: 0.8rem;
-        outline:1px solid #000000;
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* space between icon and text */
+  margin-top: 1rem;
+  padding: 0 30px;
+  height: 50px;
+  border-radius: 0.2rem;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  text-decoration: none;
+  font-size: 0.8rem;
+  outline: 1px solid #000000;
   box-shadow:
     inset 1px 1px #fff,           /* top-left white highlight */
     inset -1px -1px #404040,      /* bottom-right shadow */
-    2px 2px #1E4844;              /* external drop shadow for lift */        transition:
-          background 0.3s,
-          color 0.3s;
-      }
+    2px 2px #1E4844;              /* external drop shadow for lift */
+  transition: background 0.3s, color 0.3s;
+}
 
-      .button:hover {
-        background-color: var(--color-button-hover-bg);
-        color: var(--color-button-hover-text);
-          box-shadow:
-    inset 1px 1px #fff,           /* top-left white highlight */
-    inset -1px -1px #404040,      /* bottom-right shadow */
-    2px 2px var(--color-button-bg);              /* external drop shadow for lift */
-      }
+.button:hover {
+  background-color: var(--color-button-hover-bg);
+  color: var(--color-button-hover-text);
+  box-shadow:
+    inset 1px 1px #fff,
+    inset -1px -1px #404040,
+    2px 2px var(--color-button-bg);
+}
+
+.button-icon {
+  display: inline-block;
+  line-height: 1;
+}
+
+.button-icon img {
+  display: block;
+  color: #fff;
+  width: 14px;
+  height: 14px;
+  filter: invert(100%);
+}
 
       footer {
         padding: 4rem  0 4rem 0;
