@@ -132,8 +132,8 @@
   align-items: center;
   gap: 0.5rem; /* space between icon and text */
   margin-top: 1rem;
-  padding: 0 30px;
-  height: 45px;
+  padding: 0 20px;
+  height: 40px;
   border-radius: 0.2rem;
   background-color: var(--color-button-bg);
   color: var(--color-button-text);
