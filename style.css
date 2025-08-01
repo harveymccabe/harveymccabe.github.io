@@ -165,7 +165,7 @@
 
       .content-wrapper {
         display: flex;
-        gap: 5rem; /* ← Increased from 3rem */
+        gap: 5rem;
       }
 
       .main-content {
@@ -272,14 +272,13 @@
   mix-blend-mode: multiply;
 }
 
-/* RGB offset fuzz */
 .sidebar-image::after {
   content: "";
   position: absolute;
   inset: 0;
   background: inherit;
   mix-blend-mode: screen;
-  filter: url(#rgb-shift); /* fallback if using SVG filter below */
+  filter: url(#rgb-shift);
   pointer-events: none;
   opacity: 0.4;
 }
