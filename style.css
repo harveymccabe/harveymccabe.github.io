@@ -228,13 +228,10 @@
 
         .marquee {
           width: 80%;
-          border: 1px solid #000;
-          padding: 0.5rem 0;
         }
 
         .marquee h1 {
           font-size: 1.15rem;
-          margin: 0;
         }
 
         h2 {
