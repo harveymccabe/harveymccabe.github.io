@@ -121,8 +121,53 @@
           <div class="sidebar-image">
             <img src="/Headshot.JPG" alt="A photo of me in a blue denim jacket, against a lime green background" loading="lazy" />
           </div>
+          <div class="sidebar-faves">
+            <h3>Things I've enjoyed recently</h3>
+            <div class="sidebar-faves-body">
+          <p aria-hidden="true">
+            📺 <a href="https://www.theguardian.com/tv-and-radio/2025/jun/26/the-bear-season-four-review-finally-becoming-the-show-it-was-always-destined-to-be">The Bear Season 4</a>
+          </p>
+          <p aria-hidden="true">
+            🎧 <a href="https://www.theguardian.com/music/2025/jun/26/lorde-virgin-review">Lorde - Virgin</a>
+          </p>
+          <p aria-hidden="true">
+            🎫 <a href="https://www.setlist.fm/setlist/yeah-yeah-yeahs/2025/o2-apollo-manchester-manchester-england-6358e223.html">Yeah Yeah Yeahs: Hidden in Peaces Tour at Manchester Apollo</a>
+          </p>
+
+          <p aria-hidden="true">
+            📍 <a href="https://www.rhs.org.uk/gardens/bridgewater">RHS Bridgewater</a></p>
+          <p aria-hidden="true">
+            🍽️ <a href="https://www.a1bakery.com.au">A1 Lebanese Bakery in Brunswick, Melbourne</a>
+          </p>
+          <p aria-hidden="true">
+            🛒 <a href="https://www.paper-republic.com/en-gb">Paper Republic journals</a></p>
+          <div id="rss-entry">Loading latest post...</div>
+
+          <script>
+            const rssFeedUrl = "https://letterboxd.com/itsharveybb/rss/";
+            const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+
+            fetch(apiUrl)
+              .then((response) => response.json())
+              .then((data) => {
+                if (data.items && data.items.length > 0) {
+                  const post = data.items[0];
+                  document.getElementById("rss-entry").innerHTML = `
+            🎞️ <a href="${post.link}" target="_blank">${post.title}</a>
+          `;
+                } else {
+                  document.getElementById("rss-entry").innerText = "No posts found.";
+                }
+              })
+              .catch((err) => {
+                console.error("RSS fetch error:", err);
+                document.getElementById("rss-entry").innerText = "Could not load RSS feed.";
+              });
+          </script>
+                      </div>
+            </div>
           
-                    <div class="sidebar-faves music-player">
+          <div class="sidebar-faves music-player">
     <p><strong>Blood Orange</strong></p>
     <p>🎵 The Field (feat. The Durutti Column, Tariq Al-Sabir, Caroline Polachek & Daniel Caesar)
 </p>
@@ -201,53 +246,6 @@
     });
   }
 </script>
-          
-          
-          <div class="sidebar-faves">
-            <h3>Things I've enjoyed recently</h3>
-            <div class="sidebar-faves-body">
-          <p aria-hidden="true">
-            📺 <a href="https://www.theguardian.com/tv-and-radio/2025/jun/26/the-bear-season-four-review-finally-becoming-the-show-it-was-always-destined-to-be">The Bear Season 4</a>
-          </p>
-          <p aria-hidden="true">
-            🎧 <a href="https://www.theguardian.com/music/2025/jun/26/lorde-virgin-review">Lorde - Virgin</a>
-          </p>
-          <p aria-hidden="true">
-            🎫 <a href="https://www.setlist.fm/setlist/yeah-yeah-yeahs/2025/o2-apollo-manchester-manchester-england-6358e223.html">Yeah Yeah Yeahs: Hidden in Peaces Tour at Manchester Apollo</a>
-          </p>
-
-          <p aria-hidden="true">
-            📍 <a href="https://www.rhs.org.uk/gardens/bridgewater">RHS Bridgewater</a></p>
-          <p aria-hidden="true">
-            🍽️ <a href="https://www.a1bakery.com.au">A1 Lebanese Bakery in Brunswick, Melbourne</a>
-          </p>
-          <p aria-hidden="true">
-            🛒 <a href="https://www.paper-republic.com/en-gb">Paper Republic journals</a></p>
-          <div id="rss-entry">Loading latest post...</div>
-
-          <script>
-            const rssFeedUrl = "https://letterboxd.com/itsharveybb/rss/";
-            const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
-
-            fetch(apiUrl)
-              .then((response) => response.json())
-              .then((data) => {
-                if (data.items && data.items.length > 0) {
-                  const post = data.items[0];
-                  document.getElementById("rss-entry").innerHTML = `
-            🎞️ <a href="${post.link}" target="_blank">${post.title}</a>
-          `;
-                } else {
-                  document.getElementById("rss-entry").innerText = "No posts found.";
-                }
-              })
-              .catch((err) => {
-                console.error("RSS fetch error:", err);
-                document.getElementById("rss-entry").innerText = "Could not load RSS feed.";
-              });
-          </script>
-                      </div>
-            </div>
           
       <footer>
         <p>Thanks for visiting :)</p>
