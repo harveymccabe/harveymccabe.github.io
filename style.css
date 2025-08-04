@@ -207,6 +207,7 @@
         padding: 1rem;
         border-radius: 0.3rem;
         border: 1px solid #D7D7CC;
+        margin-bottom: 2rem;
       }
 
       @media (max-width: 800px) {
@@ -433,4 +434,62 @@
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.music-player {
+  width: 100%;
+  background: #FFFEF2;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid #D7D7CC;
+  font-size: 0.8rem;
+}
+
+.music-player h3 {
+  margin-bottom: 1rem;
+}
+
+.music-player p {
+  margin:0;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+  border: 1px solid #999;
+  position: relative;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: var(--color-primary);
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+iframe {
+  display: none;
+}
+
+.player-controls button {
+  background: rgba(80, 129, 40, 0.4);
+  color: #222;
+  font-size: 1em;
+  padding:0 1em;
+  height: 2.7em;
+}
+
+.player-controls button:hover {
+  background: #508128;
 }

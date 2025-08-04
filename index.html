@@ -167,6 +167,87 @@
                       </div>
             </div>
           
+          <div class="sidebar-faves music-player">
+  <h3>Now Playing</h3>
+    <p><strong>Blood Orange</strong></p>
+    <p>The Field (feat. The Durutti Column, Tariq Al-Sabir, Caroline Polachek & Daniel Caesar)
+</p>
+
+  <div class="player-controls">
+    <button class="button" id="playBtn">
+      ▶ Play
+    </button>
+    <button class="button" id="pauseBtn">
+      ⏸ Pause
+    </button>
+  </div>
+
+  <div class="progress-bar" id="progressBar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <div id="yt-player"></div>
+</div>
+
+<script>
+  let tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
+
+  let player;
+  let progressInterval;
+
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('yt-player', {
+      height: '0',
+      width: '0',
+      videoId: 'yTaz0TB9Zco',
+      playerVars: {
+        autoplay: 0,
+        controls: 0,
+        modestbranding: 1
+      },
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    const playBtn = document.getElementById("playBtn");
+    const pauseBtn = document.getElementById("pauseBtn");
+    const progressFill = document.getElementById("progressFill");
+    const progressBar = document.getElementById("progressBar");
+
+    playBtn.addEventListener("click", () => {
+      player.playVideo();
+      if (!progressInterval) {
+        progressInterval = setInterval(() => {
+          let current = player.getCurrentTime();
+          let duration = player.getDuration();
+          if (duration > 0) {
+            let percent = (current / duration) * 100;
+            progressFill.style.width = `${percent}%`;
+          }
+        }, 300);
+      }
+    });
+
+    pauseBtn.addEventListener("click", () => {
+      player.pauseVideo();
+    });
+
+    progressBar.addEventListener("click", (e) => {
+      const rect = progressBar.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const width = rect.width;
+      const percent = clickX / width;
+      const duration = player.getDuration();
+      player.seekTo(duration * percent, true);
+    });
+  }
+</script>
+          
       <footer>
         <p>Thanks for visiting :)</p>
         <p>ASCII Flower Garden by Joan G. Stark. Hosted on GitHub.</p>
