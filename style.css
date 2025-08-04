@@ -5,8 +5,8 @@
         --color-text: #333333;
         --color-bg: #F6F5E8;
         --color-link: #C53F29;
-        --color-button-bg: #508128;
-        --color-button-hover-bg: #34650b;
+        --color-button-bg: #008080;
+        --color-button-hover-bg: #025757;
         --color-button-text: #fff;
         --color-button-hover-text: #fff;
         --max-width: 1050px;
@@ -123,7 +123,7 @@
       }
       
       .sidebar-faves a{
-        color: #508128;
+        color: #008080;
       }
       
       .sidebar-faves h3{
@@ -483,7 +483,7 @@ iframe {
 }
 
 .player-controls button {
-  background: rgba(80, 129, 40, 0.4);
+  background: rgba(97, 209, 209, 0.67);
   color: #222;
   font-size: 1em;
   padding:0 1em;
@@ -491,5 +491,5 @@ iframe {
 }
 
 .player-controls button:hover {
-  background: #508128;
+  background: #008080;
 }
