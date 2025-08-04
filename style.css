@@ -438,7 +438,8 @@
 
 .music-player {
   width: 100%;
-  background: #FFFEF2;
+  background: #0dafaf;
+  color: #fff;
   padding: 1rem;
   border-radius: 0.3rem;
   border: 1px solid #D7D7CC;
