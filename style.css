@@ -123,7 +123,7 @@
       }
       
       .sidebar-faves a{
-        color: #1E4844
+        color: #508128;
       }
       
       .sidebar-faves h3{
@@ -342,7 +342,6 @@
   justify-content: center;
   text-decoration: none;
   color: inherit;
-  background: #dfdfd8;
   box-shadow: 
     inset -1px -1px 0 #fff,   /* bottom + right highlight */
     inset 1px 1px 0 #bababa;  /* top + left shadow */
@@ -353,11 +352,11 @@
 }
 
 .dock-icon:hover {
-  background: #f4f3ea;
+  background: #fafafa;
 }
 
 .dock-item {
-    background: #e5e5de;
+    background: #e8f0e2;
 }
 
 .dock-info {
