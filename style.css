@@ -484,7 +484,7 @@ iframe {
 }
 
 .player-controls button {
-  background: rgba(97, 209, 209, 0.67);
+  background: #F6F5E8;
   color: #222;
   font-size: 1em;
   padding:0 1em;
@@ -492,5 +492,5 @@ iframe {
 }
 
 .player-controls button:hover {
-  background: #008080;
+  background: #025757;
 }
