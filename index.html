@@ -159,6 +159,49 @@ section.visible { opacity: 1; transform: translateY(0); }
   .scrolling-text: {width: 100%;}
   .scrolling-text-np { width:100%; }
 }
+  
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* space between icon and text */
+  margin-top: 1rem;
+  padding: 0 20px;
+  height: 40px;
+  border-radius: 0.2rem;
+  background: #FA502E;
+  color: var(--color-button-text);
+  text-decoration: none;
+  font-size: 1rem;
+  outline: 1px solid #000000;
+  box-shadow:
+    inset 1px 1px #fff,         
+    inset -1px -1px #404040,
+    2px 2px #1E4844;
+  transition: background 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background: #B53A22;
+  color: var(--color-button-hover-text);
+  text-decoration: none;
+  box-shadow:
+    inset 1px 1px #fff,
+    inset -1px -1px #404040,
+    2px 2px var(--color-button-bg);
+}
+
+.button-icon {
+  display: inline-block;
+  line-height: 1;
+}
+
+.button-icon img {
+  display: block;
+  color: #fff;
+  width: 14px;
+  height: 14px;
+  filter: invert(100%);
+}
 </style>
 </head>
 <body>
@@ -211,6 +254,10 @@ section.visible { opacity: 1; transform: translateY(0); }
       <p>
         Most of all, I enjoy bringing together teams to deliver content that offers genuine value to its audience - prioritising open and empathetic leadership.
       </p>
+      
+      <p><a href="/CV/Harvey%20McCabe%20CV.pdf" class="button" target="_blank" rel="noopener noreferrer me">  <span class="button-icon">
+    <img src="download-icon.png" alt="Download icon">
+        </span>Download my CV</a></p>
     </div>
   </div>
 </section>
