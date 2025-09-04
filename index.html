@@ -156,22 +156,15 @@ section.visible { opacity: 1; transform: translateY(0); }
 
 @media(max-width:768px){
   .radio-bar { height: auto; padding: 10px 0; align-items: flex-start; }
-
-  .music-player { 
-    flex-direction: column; 
-    align-items: stretch; 
-    gap: 0.5rem; 
-    width: 100%;       /* scale to viewport */
-  }
-
+  .music-player { flex-direction: column; align-items: stretch; gap:0.5rem; width: 100%; }
   .track-info { width: 100%; }
   .progress-bar { width: 100%; }
-
+  
+  /* Keep text readable */
   .scrolling-text { font-size: 0.9rem; width: 100%; }
   .scrolling-text-np { font-size: 0.9rem; width: auto; }
 }
-
-  
+ 
 .button {
   display: inline-flex;
   align-items: center;
