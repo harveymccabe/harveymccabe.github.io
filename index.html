@@ -104,6 +104,8 @@ section.visible { opacity: 1; transform: translateY(0); }
 /* Bio */
 #bio { background: #000; color: #FFF; font-size: 1rem; font-weight: 350; }
 #bio p { line-height: 1.8rem; margin-bottom: 1rem; letter-spacing: -0.001rem; }
+#bio li { line-height: 1.8rem; letter-spacing: -0.001rem; }
+  
 #bio .container { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; }
 @media (max-width: 768px) { #bio .container { grid-template-columns: 1fr; } }
 
@@ -112,7 +114,8 @@ section.visible { opacity: 1; transform: translateY(0); }
   background: #FA502E;
   font-weight: 500;
   padding: 40px 0;
-  text-align: left; /* left align text as requested */
+  height: fit-content;
+  text-align: left;
 }
 #cuppa h1 { font-size: 2rem; margin-bottom: 1rem; }
 #cuppa p { max-width: 800px; font-size: 1.2rem; margin-bottom: 0.5rem; letter-spacing: normal;}
