@@ -1,382 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harvey McCabe</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Newsreader:wght@200..800&display=swap" rel="stylesheet">
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Harvey McCabe - Digital Strategist and Senior Project Lead, based in Manchester, UK.">
+  <title>Harvey McCabe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;800&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* Body */
-body {
-  font-family: "Inter", sans-serif;
-  letter-spacing: 0.5px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  background-color: #000;
-  color: #fff;
-  line-height: 1.6;
-  scroll-behavior: smooth;
-  padding-bottom: 60px;
-}
+    body {
+      font-family: 'Archivo', sans-serif;
+      background: #000;
+      color: #ddd;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 2rem 2rem 2rem 3rem; /* more left padding */
+      text-align: left;
+      overflow-x: hidden;
+      opacity: 0;
+      animation: fadeInBg 1s ease forwards;
+    }
 
-a { color: #FA502E; text-decoration: none; }
-a:hover { text-decoration: underline; }
+    h1 {
+      font-weight: 800;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      letter-spacing: -0.01em;
+      margin-top: 20vh; /* closer to top, esp. mobile */
+      margin-bottom: 15vh;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: slideUp 0.8s ease-out forwards;
+    }
 
-/* Container */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
+    p.subtitle {
+      font-weight: 300;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      max-width: 700px;
+      line-height: 1.9rem;
+      margin-bottom: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: slideUp 0.8s ease-out forwards;
+      animation-delay: 0.4s;
+    }
 
-/* Header */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 51px;
-  background: #fff;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-  z-index: 1000;
-  border-bottom: 1px solid #eee;
-}
-header.scrolled { background: #fff; backdrop-filter: blur(8px); transition: background 0.3s ease; }
-header h1 a { font-size: 1.8rem; color: #FA502E; padding-right: 2rem; text-decoration: none; }
-nav { flex: 1; display: flex; justify-content: left; gap: 1.5rem; }
-nav a { color: #000; font-weight: 600; background: #fff; padding: 0.2rem 0.8rem; text-transform: uppercase; border: 1px solid #eee; transition: 0.3s; }
-nav a:hover { color: #fff; background: #000; }
+    footer {
+      margin-top: auto;
+      font-size: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem; /* increased spacing between links */
+    }
 
-/* Site header container */
-.site-header-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 1100px;
-  width: 100%;
-  margin: auto;
-  height: 50px;
-}
+    footer a {
+      color: #fff;
+      position: relative;
+      opacity: 0;
+      text-decoration: none;
+      color: #DE4D21;
+      transform: translateY(40px);
+      animation: slideUp 0.8s ease-out forwards;
+    }
 
-/* Sections */
-section {
-  width: 100%;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease, transform 1s ease;
-  padding: 80px 20px 50px;
-  min-height: 300px;
-}
-section.visible { opacity: 1; transform: translateY(0); }
+    footer a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      opacity: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
 
-/* About */
-#about {
-  background: #fff;
-  background-size: 50px 50px;
-  background-image: linear-gradient(to right, #eee 1px, transparent 1px),
-                    linear-gradient(to bottom, #eee 1px, transparent 1px);
-}
-.container-about { max-width: 1100px; margin: 0 auto; padding: 28px 15px 0 15px; display: flex; flex-wrap: wrap; gap: 2rem; }
-.about-left { flex: 1 1 67%; }
-.about-right { flex: 1 1 28%; }
-.about-right img { width: 100%; height: auto; }
-#about h1 {
-  padding: 0.1rem 0.8rem 0 0.8rem;
-  background: #000;
-  color: #fff;
-  font-size: 1.45rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  width: fit-content;
-  letter-spacing: -0.004rem;
-}
-#about h2 { font-weight: 600; font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1.5rem; color: #FA502E; letter-spacing: -0.02rem; line-height: 2.8rem;}
-#about h3 { font-family: "Newsreader", serif; font-size: 1.2rem; line-height: 1.6; color: #333; max-width: 650px; letter-spacing: -0.01rem; font-weight: 400;}
+    footer a:hover::after,
+    footer a:focus::after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
 
-/* Bio */
-#bio { background: #000; color: #FFF; font-size: 1rem; font-weight: 350; }
-#bio p { line-height: 1.8rem; margin-bottom: 1rem; letter-spacing: -0.001rem; }
-#bio li { line-height: 1.8rem; letter-spacing: -0.001rem; }
-  
-#bio .container { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; }
-@media (max-width: 768px) { #bio .container { grid-template-columns: 1fr; } }
+    footer a:nth-child(1) {
+      animation-delay: 1.0s;
+    }
 
-/* Cuppa */
-#cuppa {
-  background: #FA502E;
-  font-weight: 500;
-  padding: 40px 0;
-  height: fit-content;
-  text-align: left;
-}
-#cuppa h1 { font-size: 2rem; margin-bottom: 1rem; }
-#cuppa p { max-width: 800px; font-size: 1.2rem; margin-bottom: 0.5rem; letter-spacing: normal;}
-#cuppa a { color: #fff; font-size: 2rem; font-family: "Newsreader", serif;  font-weight: 400; letter-spacing: normal;}
-  
-  @media(max-width:768px){
-    #cuppa a { font-size: 1.5rem;}
-  }
+    footer a:nth-child(2) {
+      animation-delay: 1.4s;
+    }
 
-/* Radio bar */
-.radio-bar {
-  position: fixed;
-  bottom: 0; left: 0;
-  width: 100%;
-  background: #fff;
-  color: #000;
-  z-index: 1000;
-  height: 60px; /* desktop default */
-  display: flex;
-  align-items: center;
-}
-.music-player { display: flex; align-items: center; width: 100%; gap: 1rem; flex-wrap: nowrap; }
-.track-info { flex: 2; overflow: hidden; white-space: nowrap; font-size: 0.8rem; }
-.scrolling-text { display: inline-block; letter-spacing: -0.01rem; font-size: 0.8rem; padding-left: 100%; animation: scrollText 20s linear infinite; }
-@keyframes scrollText { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
-.player-controls { display: flex; gap: 0.5rem; }
-.player-controls button {
-  background: #eee; color: #222; font-size: 0.8rem;
-  padding: 0 0.8rem; height: 2.4rem; border: none; border-radius: 0.2rem;
-  cursor: pointer; transition: background 0.3s ease;
-}
-.player-controls button:hover { background: #222; color: #F6F5E8; }
-.progress-bar { flex: 3; height: 6px; background: #FDE4D8; border-radius: 0.2rem; position: relative; cursor: pointer; }
-.progress-fill { height: 100%; width: 0%; background: #FA502E; transition: width 0.1s linear; }
-#yt-player { display: none; }
+    footer a:nth-child(3) {
+      animation-delay: 1.8s;
+    }
 
-.scrolling-text-np { background: #eee; padding: 5px 10px; font-weight: bold; margin-right: 1rem; }
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-@media(max-width:768px){
-  .radio-bar { height: auto; padding: 10px 0; align-items: flex-start; }
-  .music-player { flex-direction: column; align-items: stretch; gap:0.5rem; width: 100%; }
-  .track-info { width: 100%; }
-  .progress-bar { width: 100%; }
-  
-  /* Keep text readable */
-  .scrolling-text { font-size: 0.8rem; width: 100%; }
-  .scrolling-text-np { font-size: 0.8rem; width: auto; }
-}
- 
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem; /* space between icon and text */
-  margin-top: 1rem;
-  padding: 0 20px;
-  height: 40px;
-  border-radius: 0.2rem;
-  background: #FA502E;
-  color: var(--color-button-text);
-  text-decoration: none;
-  font-size: 1rem;
-  outline: 1px solid #000000;
-  box-shadow:
-    inset 1px 1px #fff,         
-    inset -1px -1px #404040,
-    2px 2px #1E4844;
-  transition: background 0.3s, color 0.3s;
-}
+    @keyframes fadeInBg {
+      to {
+        opacity: 1;
+      }
+    }
 
-.button:hover {
-  background: #B53A22;
-  color: var(--color-button-hover-text);
-  text-decoration: none;
-  box-shadow:
-    inset 1px 1px #fff,
-    inset -1px -1px #404040,
-    2px 2px var(--color-button-bg);
-}
-
-.button-icon {
-  display: inline-block;
-  line-height: 1;
-}
-
-.button-icon img {
-  display: block;
-  color: #fff;
-  width: 14px;
-  height: 14px;
-  filter: invert(100%);
-}
-</style>
+    @media (max-width: 600px) {
+      h1 {
+        margin-top: 15vh; /* nudges closer to top on small screens */
+      }
+    }
+  </style>
 </head>
 <body>
-
-<header id="site-header">
-  <div class="site-header-container">
-    <h1><a href="#about">✹</a></h1>
-    <nav>
-      <a href="#about">hi</a>
-      <a href="#bio">about</a>
-      <a href="#cuppa">cuppa?</a>
-    </nav>
-  </div>
-</header>
-
-<section id="about">
-  <div class="container-about">
-    <div class="about-left">
-      <h1>Hi, I'm Harvey McCabe</h1>
-      <h2>A Digital Strategist and Senior Content Lead based in Manchester, UK.</h2>
-      <h3>Newly freelance, I combine canny insights with creativity to solve strategic problems and build lively communities. From perception shifting organic social, to long-term audience growth, and storytelling through video and podcasts.</h3>
-    </div>
-    <div class="about-right">
-      <img src="/Headshot.JPG" alt="Harvey McCabe headshot">
-    </div>
-  </div>
-</section>
-
-<section id="bio">
-  <div class="container">
-    <div>
-      <p>
-        I have over twelve years' experience of building communities and campaigns for brands in the UK audio industry (including <a href="http://www.bbc.co.uk/sounds">the BBC</a> and <a href="http://www.bauermedia.co.uk">Bauer Media</a>) - until recently, working with my extremely talented team at <a href="http://www.bbc.co.uk/radio2">BBC Radio 2</a>, <a href="http://www.bbc.co.uk/radio3">Radio 3</a> and <a href="http://www.bbc.co.uk/6music">6 Music</a> to deliver 1B+ organic video views as their Senior Social Media Lead.
-      </p>
-      <p><i>Key projects included:</i></p>
-      <ul class="project-list">
-        <li>Coverage of flagship BBC live music events (Glastonbury, Radio 2 in the Park, 6 Music Festival, BBC Proms - all delivering record numbers)</li>
-        <li>Growing streaming audiences for Radio 2 and 6 Music, with a repositioning of their social offer</li>
-        <li>Proposing and launching a modern new presence for Radio 3, inviting new audiences to access classical music on platforms like TikTok</li>
-        <li>6 Music's <a href="https://www.bbc.co.uk/mediacentre/2024/bbc-radio-6-music-announces-change-the-tune">‘Change The Tune’ initiative</a> – addressing online abuse towards musicians.</li>
-      </ul>
-    </div>
-    <div>
-      <p>
-        Before that, as BBC Radio Social's Senior Audiences Planner, I led a transformed approach to data and key work around project prioritisation and platform tactics - collaborating with editorial, audience, production and marketing teams across all national networks.
-      </p>
-      <p>
-        I'm experienced in working with a wide variety of niche audiences - translating social reach into measurable success against business objectives. I also take as much enjoyment in shaping an idea, as I do in executing it - from creating process and bringing on board people, to learning from performance. Other clients have included <a href="http://www.bbc.co.uk/radio1">BBC Radio 1</a>, <a href="https://wearemonty.com">Monty Digital</a>, <a href="https://www.instagram.com/se.creatives/?hl=en-gb">S:E Creative Studio</a>, <a href="http://www.greatesthitsradio.co.uk">Greatest Hits Radio</a> and <a href="http://www.hitsradio.co.uk">Hits Radio</a>, and <a href="http://www.audioalways.com">Audio Always</a>.
-      </p>
-      <p>
-        Most of all, I enjoy bringing together teams to deliver content that offers genuine value to its audience - prioritising open and empathetic leadership.
-      </p>
-      
-      <p><a href="/CV/Harvey%20McCabe%20CV.pdf" class="button" target="_blank" rel="noopener noreferrer me">  <span class="button-icon">
-    <img src="download-icon.png" alt="Download icon">
-        </span>Download my CV</a></p>
-    </div>
-  </div>
-</section>
-
-<section id="cuppa">
-  <div class="container">
-    <h1>Cuppa?</h1>
-    <p>I'd love to chat about where I could fit into your next project.</p>
-    <p><strong><a href="mailto:harveyjmccabe@gmail.com">→ harveyjmccabe <i>at</i> gmail <i>dot</i> com</a></strong></p>
-  </div>
-</section>
-
-<div class="radio-bar" id="radio-bar">
-  <div class="container">
-    <div class="music-player">
-      <div class="track-info">
-        <div class="scrolling-text">
-          <span class="scrolling-text-np">Now Playing</span>Blood Orange - The Field (feat. The Durutti Column, Tariq Al-Sabir, Caroline Polachek & Daniel Caesar)
-        </div>
-      </div>
-      <div class="player-controls">
-        <button id="playBtn">▶ Play</button>
-        <button id="pauseBtn">■ Stop</button>
-      </div>
-      <div class="progress-bar" id="progressBar">
-        <div class="progress-fill" id="progressFill"></div>
-      </div>
-      <div id="yt-player"></div>
-    </div>
-  </div>
-</div>
-
-<script>
-// Header scroll
-const header = document.getElementById('site-header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 50);
-});
-
-// Section fade-in
-const sections = document.querySelectorAll('section');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, { threshold: 0.2 });
-sections.forEach(s => observer.observe(s));
-
-// Smooth scroll
-function smoothScroll(targetEl, duration = 1200) {
-  const target = document.querySelector(targetEl);
-  const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-  const startPosition = window.pageYOffset;
-  const distance = targetPosition - startPosition;
-  let startTime = null;
-  function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    const timeElapsed = currentTime - startTime;
-    const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
-    window.scrollTo(0, run);
-    if (timeElapsed < duration) requestAnimationFrame(animation);
-  }
-  function easeInOutQuad(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return c / 2 * t * t + b;
-    t--;
-    return -c / 2 * (t * (t - 2) - 1) + b;
-  }
-  requestAnimationFrame(animation);
-}
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    smoothScroll(this.getAttribute('href'), 1200);
-  });
-});
-
-// YouTube player
-let tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-document.head.appendChild(tag);
-let player, progressInterval;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('yt-player', {
-    height: '0', width: '0', videoId: 'yTaz0TB9Zco',
-    playerVars: { autoplay: 0, controls: 0, modestbranding: 1 },
-    events: { 'onReady': onPlayerReady }
-  });
-}
-function onPlayerReady() {
-  const playBtn = document.getElementById("playBtn");
-  const pauseBtn = document.getElementById("pauseBtn");
-  const progressFill = document.getElementById("progressFill");
-  const progressBar = document.getElementById("progressBar");
-  playBtn.addEventListener("click", () => {
-    player.playVideo();
-    if (!progressInterval) {
-      progressInterval = setInterval(() => {
-        let current = player.getCurrentTime();
-        let duration = player.getDuration();
-        if (duration > 0) progressFill.style.width = `${(current / duration) * 100}%`;
-      }, 300);
-    }
-  });
-  pauseBtn.addEventListener("click", () => { player.pauseVideo(); });
-  progressBar.addEventListener("click", (e) => {
-    const rect = progressBar.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
-    const percent = clickX / rect.width;
-    const duration = player.getDuration();
-    player.seekTo(duration * percent, true);
-  });
-}
-</script>
-
+  <main>
+    <h1>Harvey McCabe ✹</h1>
+    <p class="subtitle">A Digital Strategist and Senior Project Lead,<br> based in Manchester, UK.</p>
+  </main>
+  <footer>
+    <a href="mailto:harveyjmccabe@gmail.com">→ Say Hi</a>
+    <a href="https://www.linkedin.com/in/harveymccabe/" target="_blank" rel="noopener">→ LinkedIn</a>
+    <a href="https://harveymccabe.com/CV/Harvey%20McCabe%20CV.pdf">→ CV</a>
+  </footer>
 </body>
 </html>
