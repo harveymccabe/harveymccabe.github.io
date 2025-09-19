@@ -14,10 +14,6 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
-    }
-
     body {
       font-family: 'Archivo', sans-serif;
       background: #000;
@@ -37,7 +33,7 @@
     }
 
     /* Background video */
-    .bg-video {
+    .video-background {
       position: fixed;
       top: 0;
       left: 0;
@@ -50,7 +46,7 @@
     }
 
     /* Dark overlay */
-    .video-overlay {
+    .overlay {
       position: fixed;
       top: 0;
       left: 0;
@@ -81,6 +77,16 @@
       transform: translateY(40px);
       animation: slideUp 0.8s ease-out forwards;
       animation-delay: 0.4s;
+    }
+
+    /* Hide/show the <br> depending on screen size */
+    .subtitle br {
+      display: inline;
+    }
+    @media (max-width: 600px) {
+      .subtitle br {
+        display: none;
+      }
     }
 
     footer {
@@ -159,17 +165,16 @@
   </style>
 </head>
 <body>
-  <!-- Background video -->
-  <video autoplay muted loop playsinline class="bg-video">
+  <video autoplay muted loop playsinline class="video-background">
     <source src="Background.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
-  <!-- Overlay -->
-  <div class="video-overlay"></div>
-
+  <div class="overlay"></div>
   <main>
     <h1>Harvey McCabe ✹</h1>
-    <p class="subtitle">A Digital Strategist and Senior Project Lead,<br> based in Manchester, UK.</p>
+    <p class="subtitle">
+      A Digital Strategist and Senior Project&nbsp;Lead,<br>
+      based in Manchester, UK.
+    </p>
   </main>
   <footer>
     <a href="mailto:harveyjmccabe@gmail.com">→ Say hi</a>
