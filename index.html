@@ -26,8 +26,6 @@
       padding: 2rem 2rem 2rem 3rem;
       text-align: left;
       overflow-x: hidden;
-      opacity: 0;
-      animation: fadeInBg 1s ease forwards;
       position: relative;
       z-index: 1;
     }
@@ -69,6 +67,7 @@
       opacity: 0;
       transform: translateY(40px);
       animation: slideUp 0.8s ease-out forwards;
+      animation-fill-mode: forwards;
     }
 
     p.subtitle {
@@ -81,6 +80,7 @@
       transform: translateY(40px);
       animation: slideUp 0.8s ease-out forwards;
       animation-delay: 0.4s;
+      animation-fill-mode: forwards;
     }
 
     /* Responsive subtitle line break */
@@ -88,14 +88,14 @@
       display: inline;
     }
 
-footer {
-  margin-top: auto;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
+    footer {
+      margin-top: auto;
+      margin-bottom: 2rem; /* extra space below links */
+      font-size: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
 
     footer a {
       position: relative;
@@ -104,6 +104,7 @@ footer {
       color: #DE4D21;
       transform: translateY(40px);
       animation: slideUp 0.4s ease-out forwards;
+      animation-fill-mode: forwards;
     }
 
     footer a::after {
@@ -126,35 +127,16 @@ footer {
       transform: scaleX(1);
     }
 
-    footer a:nth-child(1) {
-      animation-delay: 1.0s;
-    }
-
-    footer a:nth-child(2) {
-      animation-delay: 1.4s;
-    }
-
-    footer a:nth-child(3) {
-      animation-delay: 1.8s;
-    }
+    footer a:nth-child(1) { animation-delay: 1.0s; }
+    footer a:nth-child(2) { animation-delay: 1.4s; }
+    footer a:nth-child(3) { animation-delay: 1.8s; }
 
     @keyframes slideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInBg {
-      to {
-        opacity: 1;
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeInVideo {
-      to {
-        opacity: 1;
-      }
+      to { opacity: 1; }
     }
 
     /* Mobile adjustments */
@@ -163,12 +145,8 @@ footer {
         padding-left: 2rem;
         padding-right: 2rem;
       }
-      h1 {
-        margin-top: 15vh;
-      }
-      .subtitle br {
-        display: none; /* collapse forced break on small screens */
-      }
+      h1 { margin-top: 15vh; }
+      .subtitle br { display: none; }
     }
   </style>
 </head>
